@@ -33,7 +33,7 @@ class CommandProcessorTest {
     @Test
     public void testProcessCommands() {
         commandProcessor.processCommand(Arrays.asList("PLACE 1,2,EAST", "FORWARD", "FORWARD", "GPS_REPORT"));
-        verify(gridOperationExecutor, times(1)).executeOperation(any());
+        verify(gridOperationExecutor, times(4)).executeOperation(any());
     }
 
 }

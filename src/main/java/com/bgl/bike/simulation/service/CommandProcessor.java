@@ -45,7 +45,7 @@ public class CommandProcessor {
         populateCommandMap(grid);
         // Start after the Place command
         commands.stream().skip(startIndex + 1).map(Command::valueOf).forEach(cmd -> {
-            commandMap.get(cmd).execute();
+            gridOperationExecutor.executeOperation(commandMap.get(cmd));
         });
 
 
